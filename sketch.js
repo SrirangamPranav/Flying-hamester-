@@ -30,7 +30,7 @@ function setup() {
 
   Background = createSprite(200,200,10,10);
   Background.addImage(backgroundImage);
-  Background.scale=3.7;
+  Background.scale=4.2;
   
   
   player = createSprite(50,200,20,50);
@@ -40,17 +40,17 @@ function setup() {
   heart1 = createSprite(40,50,20,50);
   heart1.addImage(heartImage);
   heart1.scale=0.1;
-  heart1.depth=player.depth-1;
+// heart1.depth=player.depth-1;
   
   heart2 = createSprite(65,50,20,50);
   heart2.addImage(heartImage);
   heart2.scale=0.1;
-  heart2.depth=player.depth-1;
+ // heart2.depth=player.depth-1;
   
   heart3 = createSprite(90,50,20,50);
   heart3.addImage(heartImage);
   heart3.scale=0.1;
-  heart3.depth=player.depth-1;
+  //heart3.depth=player.depth-1;
   
   gameover = createSprite(250,200,10,10);
   gameover.addImage(gameoverImage);
@@ -83,11 +83,11 @@ function draw() {
     if(keyDown("up")&&player.y>30){
        player.y = player.y - 8;
       //player.camera.x = player.camera.x+1
-      camera.position.y = player.y;
+      //camera.position.y = player.y;
     }
     if(keyDown("down")&&player.y<370){
         player.y = player.y + 8;
-      camera.position.y = player.y;
+      //camera.position.y = player.y;
     }
     if(keyWentDown("space")){
        temp=Bullet(); 
